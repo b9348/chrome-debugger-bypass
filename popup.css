@@ -1,0 +1,80 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #17211c;
+  background: #f5f7f5;
+}
+
+* { box-sizing: border-box; }
+body { width: 352px; margin: 0; background: #f5f7f5; }
+main { padding: 18px; }
+header { display: flex; align-items: center; gap: 12px; padding: 2px 2px 16px; }
+.mark {
+  display: grid;
+  flex: 0 0 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
+  background: #17211c;
+  color: #d7ff62;
+  font: 700 15px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+h1 { margin: 0 0 4px; font-size: 16px; line-height: 1.2; letter-spacing: 0; }
+header p, small, .notice {
+  margin: 0;
+  color: #68736d;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.controls { overflow: hidden; border: 1px solid #dce2de; border-radius: 8px; background: #fff; }
+.control {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e7ebe8;
+  cursor: pointer;
+}
+.control:last-child { border-bottom: 0; }
+.control span { min-width: 0; }
+.control strong { display: block; margin-bottom: 3px; font-size: 13px; letter-spacing: 0; }
+.control small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 240px; }
+input[role="switch"] {
+  appearance: none;
+  width: 38px;
+  height: 22px;
+  flex: 0 0 38px;
+  margin: 0;
+  border: 1px solid #aeb8b2;
+  border-radius: 11px;
+  background: #dfe4e1;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+input[role="switch"]::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 24%);
+  transition: transform 120ms ease;
+}
+input[role="switch"]:checked { border-color: #16784a; background: #16784a; }
+input[role="switch"]:checked::before { transform: translateX(16px); }
+input[role="switch"]:disabled { cursor: not-allowed; opacity: .45; }
+input[role="switch"]:focus-visible { outline: 2px solid #16784a; outline-offset: 2px; }
+.notice {
+  min-height: 34px;
+  margin-top: 12px;
+  padding: 9px 10px;
+  border-left: 3px solid #9aac3b;
+  background: #eef3df;
+  color: #465228;
+}
+.notice.error { border-color: #b42318; background: #fff0ee; color: #8a1c13; }

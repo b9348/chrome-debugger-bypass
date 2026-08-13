@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "断点绕过助手",
+  "version": "1.1.0",
+  "description": "跳过网页恶意 debugger 暂停，避免开发者工具被反调试脚本阻断。",
+  "permissions": ["debugger", "storage", "tabs", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "service-worker.js" },
+  "action": {
+    "default_title": "断点绕过助手",
+    "default_popup": "popup.html"
+  }
+}

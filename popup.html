@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>断点绕过助手</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="mark" aria-hidden="true">{ }</div>
+        <div>
+          <h1>断点绕过助手</h1>
+          <p id="status">正在读取当前页面...</p>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="防护设置">
+        <label class="control">
+          <span><strong>启用插件</strong><small>允许插件跳过网页断点</small></span>
+          <input id="enabled" type="checkbox" role="switch" />
+        </label>
+        <label class="control">
+          <span><strong>保护当前网站</strong><small id="origin">当前页面不支持</small></span>
+          <input id="currentSite" type="checkbox" role="switch" />
+        </label>
+        <label class="control">
+          <span><strong>所有网站自动保护</strong><small>打开网页时自动启用</small></span>
+          <input id="allSites" type="checkbox" role="switch" />
+        </label>
+        <label class="control">
+          <span><strong>动态脚本清理</strong><small>拦截 eval、Function 和定时器陷阱</small></span>
+          <input id="dynamicGuard" type="checkbox" role="switch" />
+        </label>
+      </section>
+      <p class="notice" id="notice">开启后请刷新网页，再打开开发者工具。</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
